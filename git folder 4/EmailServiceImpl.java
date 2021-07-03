@@ -191,6 +191,7 @@ public class EmailServiceImpl implements EmailService{
 	        InputStreamSource imageSource =new ByteArrayResource(bytes);
 	        helper.addInline("bankIcon", imageSource, "image/png");
 	        
+			// will send the email over. 
 	        javaMailSender.send(message);
 		 }catch (Exception e) {
 			e.printStackTrace();
